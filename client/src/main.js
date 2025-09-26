@@ -1,7 +1,7 @@
 const jokeDisplaySection = document.getElementById("app");
 
 async function fetchJokes() {
-  const response = await fetch("http://localhost:8080/jokes");
+  const response = await fetch("https://monorepo-gsa8.onrender.com/jokes");
   const jokes = await response.json();
   console.log(jokes);
 
@@ -35,7 +35,7 @@ form.addEventListener("submit", async (event) => {
   const userJoke = Object.fromEntries(data);
   console.log(userJoke);
 
-  const response = await fetch("http://localhost:8080/jokes", {
+  const response = await fetch("https://monorepo-gsa8.onrender.com/jokes", {
     headers: {
       "Content-Type": "application/json",
     },
